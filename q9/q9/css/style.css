@@ -1,4 +1,167 @@
 @charset "UTF-8";
-
-/* カード内の画像は以下のURLを使用して下さい */
-/* https://picsum.photos/id/1005/200/300 */
+/* q9-1 */
+.box {
+  background: #76ff826b;
+  height: 200px;
+  width: 200px;
+}
+.box.fadein {
+  animation-name: fadein;
+  animation-duration: 4s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+@keyframes fadein {
+  0% {
+  opacity: 0;
+  transform: scale(1)
+  }
+  100% {
+  opacity: 1;
+  transform: scale(1)
+  }
+}
+/* q9-2 */
+.box.fadeout {
+  animation-name: fadeout;
+  animation-duration: 4s;
+  opacity: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* q9-3 */
+.box.rotate {
+  animation-name: rotate;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+@keyframes rotate {
+  0% {animation-iteration-count: infinite;
+  transform: rotate(0deg);
+  }
+  100% {
+  transform: rotate(360deg);
+  }
+}
+/* q9-4 */
+.box-blue {
+  width: 200px;
+  height: 200px;
+  background: #331aefd0;
+  transition-duration: 0.5s;
+}
+.box-blue.to-pink:hover {
+  background: #ff27e2c9;
+}
+/* q9-5 */
+.box-blue {
+  width: 200px;
+  height: 200px;
+  background: #331aefd0;
+  transition-duration: 0.5s;
+}
+.box-blue.rotate:hover {
+  animation-name: rotate;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+/* q9-6 */
+.box-blue.slide-up:hover {
+  animation: slideinUp 0.5s infinite;
+}
+@keyframes slideinUp {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-20%);
+  }
+}
+/* q9-7 */
+.box-blue.slide-right:hover {
+  animation: slideinRight 0.5s infinite;
+}
+@keyframes slideinRight {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(20%);
+  }
+}
+/* q9-8 */
+.box-blue.heght-change:hover {
+  transition-duration: 0.5s;
+  height: 300px;
+}
+/* q9-9 */
+.box-blue.width-change:hover {
+  transition-duration: 0.5s;
+  width: 500px;
+}
+/* q9-10 */
+.box-blue.border:hover {
+  transition-duration: 0.5s;
+  border: 10px #00ffe5 solid;
+  box-sizing: border-box;
+}
+.box-blue.box-shadow:hover {
+  transition-duration: 0.5s;
+  box-shadow: 8px 11px 10px 3px #06031ed0;
+}
+.circle{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 10px solid #ecf1f2;
+    border-top-color: #14ff4bcd;
+    animation: rotate 1.1s linear infinite;
+  }
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.card-queue {
+  display: flex;
+}
+.staff-card {
+  width:300px;
+  border: 1px solid #000000;
+  border-left: 0;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
+}
+.staff-card:first-child {
+  border-left:solid 1px #000000;
+}
+.bg {
+  background-image: url(../image/coffee-background.jpg);
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+}
+p {
+  margin-top: 20px;
+}
+.staff-card:hover {
+  box-shadow: 0px 10px 3px #424242d0;
+  /* z-index: 1; 不要ではないか？　positionがstaticでは反映されない*/
+}

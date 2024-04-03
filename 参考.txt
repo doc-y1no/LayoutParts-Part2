@@ -1,0 +1,66 @@
+q8
+background-imageを調べる
+デフォルトで設定した際は、どのような挙動になるか意識しながら、使って見る。
+
+cssでアニメーション：
+animation
+@keyframes
+を使用する。
+フェードイン
+フェードアウト
+要素を回す
+
+animation プロパティ一覧：
+animation-name -> アニメーションの名前
+animation-duration -> アニメーションの開始から終わるまでの時間（1回分）
+animation-timing-function -> アニメーションの進捗時の効果
+animation-delay -> アニメーションが開始するまでの時間
+animation-iteration-count -> アニメーションの繰り返し回数
+animation-direction -> アニメーションを逆再生（順番）
+animation-fill-mode -> アニメーションの開始前と終了後の状態
+animation-play-state -> アニメーションの再生と停止
+
+animation-timing-function：
+アニメーションの振る舞い方を指定します。「始め早く終わりゆっくり」とか、「一定のスピード」などが選択できます。
+
+値	説明
+ease	開始と完了を滑らかにする（cubic-bezier(0.25, 0.1, 0.25, 1.0) を指定したのと同じ）（初期値）
+linear	一定（cubic-bezier(0.0, 0.0, 1.0, 1.0) を指定したのと同じ）
+ease-in	ゆっくり始まる（cubic-bezier(0.42, 0, 1.0, 1.0) を指定したのと同じ）
+ease-out	ゆっくり終わる（cubic-bezier(0, 0, 0.58, 1.0) を指定したのと同じ）
+ease-in-out	ゆっくり始まってゆっくり終わる（cubic-bezier(0.42, 0, 0.58, 1.0) を指定したのと同じ）
+cubic-bezier(数値, 数値, 数値, 数値)	3次ベジェ曲線のP1とP2を (x1, y1, x2, y2) で指定
+
+高さを変更する　animation
+アコーディオンメニューなどという。
+https://gray-code.com/javascript/change-size-of-html-element-with-animation/
+
+hoverで変更したいなら、要素に:hoverをつけて、変更後を記入するだけでできる。
+.c:hover {
+  width: 200px;
+  height: 200px;
+}
+
+box-sizingとは？
+box-sizingは要素のwidth(幅)とheight(高さ)に、
+paddingとborderのサイズを含めるかどうかを指定するCSSプロパティ
+値
+
+指定内容
+
+content-box(初期値)：paddingとborderを要素のwidthとheightに含まない
+border-box：paddingとborderを要素のwidthとheightに含む
+inherit：親要素の指定を引き継ぐ
+
+
+関係無いけど使えそう
+https://web-design-textbook.com/css-advance/
+
+z-index：
+positionがstaticだと反映されない
+つまり、positionを何かしら、指定しないと反映されないが、反映しても、q9の課題の期待通りの動きはしない
+-1をつけたりすると、hoverもしなくなる。
+
+ボタンクリック：
+参考サイト　シンプルで作りやすい
+https://qiita.com/ryo___eng/items/813b933ddead451f1263
