@@ -38,13 +38,10 @@
 }
 /* q9-3 */
 .box.rotate {
-  animation-name: rotate;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
-  animation-fill-mode: forwards;
+  animation: rotate 4s linear infinite;
 }
 @keyframes rotate {
-  0% {animation-iteration-count: infinite;
+  0% {
   transform: rotate(0deg);
   }
   100% {
@@ -61,42 +58,26 @@
 .box-blue.to-pink:hover {
   background: #ff27e2c9;
 }
+
 /* q9-5 */
 .box-blue {
   width: 200px;
   height: 200px;
   background: #331aefd0;
-  transition-duration: 0.5s;
+  transition-duration: 0.5s all solid;
 }
 .box-blue.rotate:hover {
-  animation-name: rotate;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
-  animation-fill-mode: forwards;
+  transform: rotate(360deg);
+  transition: 2s;
 }
+
 /* q9-6 */
 .box-blue.slide-up:hover {
-  animation: slideinUp 0.5s infinite;
-}
-@keyframes slideinUp {
-  0% {
-    transform: translateY(0%);
-  }
-  100% {
-    transform: translateY(-20%);
-  }
+  transform: translateY(-20%);
 }
 /* q9-7 */
 .box-blue.slide-right:hover {
-  animation: slideinRight 0.5s infinite;
-}
-@keyframes slideinRight {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(20%);
-  }
+  transform: translateX(20%);
 }
 /* q9-8 */
 .box-blue.heght-change:hover {
@@ -162,6 +143,7 @@ p {
   margin-top: 20px;
 }
 .staff-card:hover {
+  transition: 1s;
   box-shadow: 0px 10px 3px #424242d0;
   /* z-index: 1; 不要ではないか？　positionがstaticでは反映されない*/
 }
